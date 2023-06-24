@@ -1,0 +1,134 @@
+:root {
+  /********** STYLE GUIDE **********/
+
+  /********** COLORS **********/
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+  --grayBackground: #f2f2f2;
+  --white: #ffffff;
+
+  /********** FONT FAMILIES **********/
+  --lexendDeca: "Lexend Deca", sans-serif;
+  --bigShouldersDisplay: "Big Shoulders Display", cursive;
+
+  /********** FONT WEIGHTS **********/
+  --fw400: 400;
+  --fw700: 700;
+}
+
+/********** GENERAL **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--grayBackground);
+}
+
+/********** ARTICLE **********/
+.vehicles-container {
+  max-width: 32.7rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+/********* GENERAL STYLES *********/
+.car-type-container {
+  padding: 4.8rem;
+}
+
+.car-icon {
+  display: block;
+  margin-bottom: 3.5rem;
+}
+
+.header-text {
+  font-family: var(--bigShouldersDisplay);
+  font-weight: var(--fw700);
+  font-size: 4rem;
+  line-height: 4.8rem;
+  color: var(--veryLightGray);
+  margin-bottom: 2.5rem;
+}
+
+.paragraph-text {
+  font-family: var(--lexendDeca);
+  font-weight: var(--fw400);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--transparentWhite);
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  border: none;
+  background-color: var(--veryLightGray);
+  border-radius: 2.5rem;
+  padding: 1.2rem 3.15rem;
+  font-family: var(--lexendDeca);
+  font-weight: var(--fw400);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+/********** SEDANS CONTAINER **********/
+.sedans-container {
+  background-color: var(--brightOrange);
+}
+
+.sedan-btn {
+  color: var(--brightOrange);
+}
+
+/********** SUVS CONTAINER **********/
+.suvs-container {
+  background-color: var(--darkCyan);
+}
+
+.suvs-btn {
+  color: var(--darkCyan);
+}
+
+/********** LUXURY CONTAINER *********/
+.luxury-container {
+  background-color: var(--veryDarkCyan);
+}
+
+.luxury-btn {
+  color: var(--veryDarkCyan);
+}
+
+/********** HOVER STATES **********/
+.btn:is(:hover, :focus) {
+  cursor: pointer;
+  color: var(--white);
+  background-color: inherit;
+  box-shadow: 0px 0px 0px 2px var(--white);
+}
+
+/******** 920px MEDIA QUERY *******/
+@media (min-width: 57.5em) {
+  html,
+  body {
+    align-items: center;
+  }
+
+  .vehicles-container {
+    max-width: 92rem;
+    display: flex;
+  }
+
+  .paragraph-text {
+    margin-bottom: 8.3rem;
+  }
+}
